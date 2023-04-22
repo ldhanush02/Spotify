@@ -1,0 +1,28 @@
+.Navbar{
+    background-color:#252525;
+    color: whitesmoke;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+.Heading{
+    width: 60px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
