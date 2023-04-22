@@ -10,4 +10,4 @@ function Podcast(){
         </div>
     )
 }
-export default Podcast
+export default Podcast;
