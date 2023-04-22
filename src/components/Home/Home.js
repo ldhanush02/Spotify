@@ -1,6 +1,6 @@
 import React from "react"
-import Navbar from ".components/Navbar";
-import Podcast from ".components/Podcast";
+import Navbar from "../Navbar";
+import Podcast from "../Podcast/Podcast";
 function Home() {
     return (
         <div className="Homepage">
