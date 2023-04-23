@@ -30,8 +30,10 @@ export function Admin(props) {
           <div className="namediv">
             <label className="Name">Enter Podcast Name: </label>
             <input
-              className="Name"
+              className="pName"
+              id="pName"
               type="text"
+              placeholder="Podcast Name"
               value={podcastName}
               size="20"
               onChange={(e) => setPodcastName(e.target.value)}
@@ -40,7 +42,9 @@ export function Admin(props) {
           <div className="descdiv">
             <label className="Description">Enter Description: </label>
             <textarea
-              className="Description"
+              className="pDescription"
+              id="pDescription"
+              placeholder="Description"
               value={podcastDescription}
               onChange={(e) => setPodcastDescription(e.target.value)}
             />
@@ -48,41 +52,47 @@ export function Admin(props) {
           <div className="speakdiv">
             <label className="Speaker">Enter Speaker: </label>
             <input
-              className="SpeakerName"
+              className="pSpeakerName"
               value={speakerName}
               type="text"
+              id="pSpeakerName"
+              placeholder="Speaker Name"
               onChange={(e) => setSpeakerName(e.target.value)}
             />
           </div>
           <div className="catediv">
             <label className="Category">Select Category: </label>
             <select
-              className="Categorys"
+              className="pCategory"
+              id="pCategory"
               value={category}
               onChange={(e) => setCategory(e.target.value)}
             >
               <option value="">~</option>
               <option value="Technology">Technology </option>
-              <option value="Science">Science </option>
-              <option value="Sports">Sports </option>
-              <option value="Music">Music </option>
-              <option value="News">News </option>
+              <option value="Sci-Fi">Sci-Fi </option>
+              <option value="Comedy">Comedy </option>
+              <option value="Spiritual">Spiritual </option>
+              <option value="Horror">Horror </option>
               <option value="Other">Other...</option>
             </select>
           </div>
           <div className="langdiv">
             <label className="Language">Select Language: </label>
             <select
-              className="Languages"
+              className="pLanguage"
+              id="pLanguage"
               value={language}
               onChange={(e) => setLanguage(e.target.value)}
             >
               <option value="English">English</option>
-              <option value="Spanish">Español</option>
-              <option value="French">Français</option>
-              <option value="Japanese">日本</option>
-              <option value="Tamil">தமிழ்</option>
-              <option value="Telugu">తెలుగు</option>
+              <option value="Hindi">Hindi</option>
+              <option value="Tamil">Tamil</option>
+              <option value="Telugu">Telugu</option>
+              <option value="Spanish">Spanish</option>
+              <option value="French">French</option>
+              <option value="Japanese">Japanese</option>
+              
               <option value="Other">Other</option>
             </select>
           </div>
@@ -95,6 +105,8 @@ export function Admin(props) {
                   type="radio"
                   name="fileType"
                   value="audio"
+                  className="pAType"
+                  id="pAType"
                   checked={fileType === "audio"}
                   onChange={(e) => setFileType(e.target.value)}
                 />
@@ -105,6 +117,8 @@ export function Admin(props) {
                   type="radio"
                   name="fileType"
                   value="video"
+                  className="pVType"
+                  id="pVType"
                   checked={fileType === "video"}
                   onChange={(e) => setFileType(e.target.value)}
                 />
@@ -113,7 +127,7 @@ export function Admin(props) {
           </div>
           <div className="views">
             <label className="viewlabel">Views: </label>
-            <p className="viewcount"> 69</p>
+            <input type="text" placeholder="Views" className="viewcount" id="viewcount"/>
           </div>
           {/* <div>
             <label>Choose File:</label>
@@ -124,7 +138,7 @@ export function Admin(props) {
             />
           </div> */}
           <div className="submitdiv">
-            <input className="submit" type="submit" />
+            <input className="submit" id="submit" type="submit" />
           </div>
         </form>
       </div>
