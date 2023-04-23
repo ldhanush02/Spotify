@@ -129,6 +129,10 @@ export function Admin(props) {
             <label className="viewlabel">Views: </label>
             <input type="text" placeholder="Views" className="viewcount" id="viewcount"/>
           </div>
+          <div>
+            <label className="Thumbnail">thumbnail (Link): </label>
+            <input type="url" className="pThumbnail" id="pThumbnail" placeholder="Thumbnail link"></input>
+          </div>
           {/* <div>
             <label>Choose File:</label>
             <input
