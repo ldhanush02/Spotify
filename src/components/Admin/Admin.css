@@ -159,6 +159,8 @@ input[type="radio"] {
     top: -1px;
     background-color: grey;
     outline: none;
+    display: flex;
+    flex-direction: row;
     cursor: pointer;
 }
 
@@ -174,6 +176,8 @@ input[type="radio"]:checked::before {
     border-radius: 50%;
     background-color: #2196f3;
     cursor: pointer;
+    display: flex;
+    flex-direction: row;
 }
 
 .submit {
