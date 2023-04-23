@@ -111,6 +111,10 @@ export function Admin(props) {
               </span>
             </radio>
           </div>
+          <div className="views">
+            <label className="viewlabel">Views: </label>
+            <p className="viewcount"> 69</p>
+          </div>
           {/* <div>
             <label>Choose File:</label>
             <input
