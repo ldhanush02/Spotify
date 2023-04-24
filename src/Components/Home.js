@@ -5,7 +5,13 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { ImHome} from "react-icons/im";
+import { useForm } from "react-hook-form";
+import { useState } from 'react';
 function Home() {
+  const { register, handleSubmit, formState:{errors} } = useForm();
+  const onSubmit = data =>{ 
+        console.log(data)
+      };
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
     <Container>
@@ -16,21 +22,23 @@ function Home() {
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto ms-5">
           <Nav.Link href="/"><ImHome/>Home</Nav.Link>
-        <Form className="d-flex ms-5">
+        <Form className="d-flex ms-5" onSubmit={handleSubmit(onSubmit)}>
         <Form.Control
           type="search"
           placeholder="Search"
           className="me-2"
           aria-label="Search"
+          autoFocus {...register("SearchName",{required: true})} 
         />
-        <Button variant="outline-success">Search</Button>
+        {errors.SearchName?.type==='required' && <p className='text-danger text-start '>*This field is required</p>}
+        <Button variant="outline-success" type="submit">Search</Button>
       </Form>
         </Nav>
         <Nav>
         <img src='https://www.citypng.com/public/uploads/small/31634946729ohd4odcijurvd40v45hl8lft4w1qmw8bx6fpldgscjmqvhptmmk00uh8j1ol5e20u2vd13ewb2ojyzg60xau3z3mkymxo7ydaql1.png'
         width="40px" height="40px"/>
           <NavDropdown title="Profile" id="collasible-nav-dropdown">
-          <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+          <NavDropdown.Item href="/Admin">Action</NavDropdown.Item>
           <NavDropdown.Item href="#action/3.2">
             UserName
           </NavDropdown.Item>
