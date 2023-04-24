@@ -12,7 +12,7 @@ const DBurl= 'mongodb+srv://mydatabase:mydatabase@mycluster.3qnvw.mongodb.net/?r
 // connect with mongodb server
 mclient.connect(DBurl)
 .then((client)=>{
-    let dbObj=client.db("mydb");
+    let dbObj=client.db("ListenPodcast");
     //create collection objects
     let userCollectionObject=dbObj.collection("usercollection");
     let podcastCollectionObject=dbObj.collection("podcastcollection");
