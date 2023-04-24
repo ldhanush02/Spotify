@@ -127,7 +127,8 @@ code {
 .DisplayHome{
   display: flex;
   overflow: auto;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: mandatory !important;
+  scrollbar-width: 1px !important;
 }
 .DisplayHome::-webkit-scrollbar {
   display: none;

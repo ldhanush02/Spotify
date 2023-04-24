@@ -53,14 +53,6 @@ function DisplayHome() {
     
   return (
     <div>
-    <h1 className='text-start text-primary CardZoner'>Most Popular</h1>
-    <div className='loader mb-2'></div>
-    <div className="DisplayHome d-flex pb-4">
-    {
-        arr0.map((item)=>
-        <Card1 item={item}/>)
-    }
-    </div>
     <h1 className='text-start text-primary CardZoner'>Horror</h1>
     <div className='loader mb-2'></div>
     <div className="DisplayHome d-flex pb-4">
@@ -77,6 +69,7 @@ function DisplayHome() {
         <Card1 item={item}/>)
     }
     </div>
+    
     <h1 className='text-start text-primary CardZoner'>Comdey</h1>
     <div className='loader mb-2'></div>
     <div className="DisplayHome d-flex pb-4">
@@ -101,6 +94,7 @@ function DisplayHome() {
         <Card1 item={item}/>)
     }
     </div>
+    
     </div>
   );
 }
