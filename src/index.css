@@ -262,11 +262,6 @@ font-weight: 10rem ;
 }
 
 .player-wrapper {  
-  display: block !important;
-  margin:auto !important;
-  padding: auto !important;
-}
-.player-wrapper {  
   flex: 6;
 }
 .player-wrapper2{
