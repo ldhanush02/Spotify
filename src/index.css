@@ -108,7 +108,7 @@ code {
   width: 0%;
   height: 100%;
   border-radius: 30px;
-  animation: moving 1s ease-in-out infinite;
+  animation: moving 1s ease-in-out 5;
   ;
 }
 
@@ -127,8 +127,7 @@ code {
 .DisplayHome{
   display: flex;
   overflow: auto;
-  scroll-snap-type: mandatory;
-  scrollbar-width: 1px !important;
+  scroll-snap-type: x mandatory;
 }
 .DisplayHome::-webkit-scrollbar {
   display: none;
@@ -257,14 +256,8 @@ font-weight: 10rem ;
   width: 0%;
   height: 100%;
   border-radius: 30px;
-  animation: moving 1s ease-in-out infinite;
+  animation: moving 1s ease-in-out 5;
   ;
-}
-
-.player-wrapper {  
-  display: block !important;
-  margin:auto !important;
-  padding: auto !important;
 }
 
 .player-wrapper {  

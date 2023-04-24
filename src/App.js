@@ -7,6 +7,7 @@ import Search from './Components/Search';
 import VideoPage from './Components/VideoPage';
 import { Route, Routes } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import Admin from './Components/Admin/Admin.js';
 function App() {
   let navigate=useNavigate();
   const tranfertoBlog=()=>{
@@ -19,6 +20,7 @@ function App() {
     <Route path="/" element={<DisplayHome />} />
     <Route path="/Search" element={<Search />} />
     <Route path="/Video" element={<VideoPage />} />
+    <Route path="/Admin" element={<Admin />} />
   </Routes>
       {/*<Home/>*/}
       {/*<Search/>*/}
