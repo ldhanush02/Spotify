@@ -1,6 +1,9 @@
+import { useState } from 'react';
+import axios from 'axios';
 import Card1 from './Card1';
 function DisplayHome() {
-    let arr1=[{}]
+    let [arr1,setarr1]=useState([{}]);
+    
   return (
     <div>
     <h1 className='text-start text-primary CardZoner'>Horror</h1>
